@@ -1,0 +1,20 @@
+# Created using wingetcreate 1.6.4.0
+# yaml-language-server: $schema=https://aka.ms/winget-manifest.installer.1.6.0.schema.json
+
+PackageIdentifier: Metanorma.Metanorma
+PackageVersion: 1.13.0
+InstallerType: zip
+NestedInstallerType: portable
+NestedInstallerFiles:
+- RelativeFilePath: metanorma.exe
+  PortableCommandAlias: metanorma
+UpgradeBehavior: install
+Installers:
+- Architecture: x64
+  InstallerUrl: https://github.com/metanorma/packed-mn/releases/download/v1.13.0/metanorma-windows-x86_64.zip
+  InstallerSha256: 9F8268ACCBD52BD2C26393DC9804794686C6BB7533F9C51EDF868529790C2397
+  Dependencies:
+    PackageDependencies:
+    - PackageIdentifier: Microsoft.VCRedist.2015+.x64
+ManifestType: installer
+ManifestVersion: 1.6.0
